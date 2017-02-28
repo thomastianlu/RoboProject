@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class CharacterMovement : MonoBehaviour {
-
+    
+    [Header("Character Stats")][Space(5)]
     [SerializeField]
     private float _movementSpeed;
     [SerializeField]
@@ -10,9 +11,12 @@ public class CharacterMovement : MonoBehaviour {
 
     private Rigidbody _rigidbody;
 
-
+    // References
+    [Header("References")][Space(5)]
     [SerializeField]
     private Animator _animator;
+    [SerializeField]
+    private GroundChecker _groundChecker;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +26,7 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ManageKeyboardControls();
+        ManageAttack();
 	}
 
     void ManageKeyboardControls()
@@ -34,9 +39,18 @@ public class CharacterMovement : MonoBehaviour {
         _animator.SetFloat("MoveSpeed", characterMagnitude);
 
         // Moving Vertical
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             _rigidbody.AddForce(Vector3.up * _jumpHeight);
+            _animator.Play("Jump");
+        }
+    }
+
+    void ManageAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _animator.Play("NormalPunch");
         }
     }
 }
