@@ -7,8 +7,12 @@ public class TileGenerator : MonoBehaviour {
 
     [SerializeField]
     private TileGeneratorDetector _topTileGenerator;
+    private float _topTilePositionTopYLimit;
+    private float _topTilePositionBottomYLimit;
     [SerializeField]
     private TileGeneratorDetector _bottomTileGenerator;
+    private float _bottomTilePositionBottomYLimit;
+    private float _bottomTilePositionMiddleYLimit;
 
     [SerializeField]
     private GameObject _tilePrefab;
@@ -19,19 +23,25 @@ public class TileGenerator : MonoBehaviour {
 
     [SerializeField]
     private Transform _inactivePoolParent;
-    [SerializeField]
-    private Transform _activePoolParent;
-
 
     // Use this for initialization
     void Start () {
         InitializeObjectPool();
-	}
+        InitializeTileGeneratorPositions();
+    }
 
     // Update is called once per frame
     void Update()
     {
         ManageTileGeneration();
+    }
+
+    void InitializeTileGeneratorPositions()
+    {
+        _topTilePositionTopYLimit = _topTileGenerator.transform.position.y;
+        _bottomTilePositionBottomYLimit = _bottomTileGenerator.transform.position.y;
+        _topTilePositionBottomYLimit = _topTilePositionTopYLimit - 2;
+        _bottomTilePositionMiddleYLimit = _bottomTilePositionBottomYLimit + 2;
     }
 
     void InitializeObjectPool()
@@ -55,6 +65,7 @@ public class TileGenerator : MonoBehaviour {
                 newTile.transform.position = _topTileGenerator.transform.position;
                 newTile.SetActive(true);
                 _topTileGenerator.shouldCreateTile = false;
+                MoveTileGenerator(_topTileGenerator.transform, _topTilePositionTopYLimit, _topTilePositionBottomYLimit);
             }
         }
 
@@ -66,7 +77,20 @@ public class TileGenerator : MonoBehaviour {
                 newTile.transform.position = _bottomTileGenerator.transform.position;
                 newTile.SetActive(true);
                 _bottomTileGenerator.shouldCreateTile = false;
+                MoveTileGenerator(_bottomTileGenerator.transform, _bottomTilePositionMiddleYLimit, _bottomTilePositionBottomYLimit);
             }
+        }
+    }
+
+    void MoveTileGenerator(Transform tileGeneratorToMove, float YCoordinateTopLimit, float YCoordinateBottom)
+    {
+        int randomMovement = Random.Range(0, 2);
+        randomMovement = randomMovement > 0 ? 1 : -1;
+
+        if (tileGeneratorToMove.position.y + randomMovement >= YCoordinateBottom 
+            && tileGeneratorToMove.position.y + randomMovement <= YCoordinateTopLimit)
+        {
+            tileGeneratorToMove.position += new Vector3(0f, randomMovement, 0f);
         }
     }
 
@@ -79,8 +103,6 @@ public class TileGenerator : MonoBehaviour {
                 return x;
             }
         }
-
         return null;
     }
-
 }
