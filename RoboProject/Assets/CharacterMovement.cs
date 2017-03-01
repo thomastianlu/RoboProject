@@ -15,8 +15,6 @@ public class CharacterMovement : MonoBehaviour {
     [Header("References")][Space(5)]
     [SerializeField]
     private Animator _animator;
-    [SerializeField]
-    private GroundChecker _groundChecker;
 
 	// Use this for initialization
 	void Start () {
