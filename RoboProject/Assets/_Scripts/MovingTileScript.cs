@@ -18,6 +18,9 @@ public class MovingTileScript : MonoBehaviour {
 
     void MoveBlock()
     {
-        transform.position += Vector3.left * _moveSpeed * Time.deltaTime;
+        if (GameManager.instance.bossIsWalking)
+        {
+            transform.position += Vector3.left * _moveSpeed * Time.deltaTime;
+        }
     }
 }

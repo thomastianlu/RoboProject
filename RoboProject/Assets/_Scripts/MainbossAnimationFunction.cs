@@ -28,9 +28,26 @@ public class MainbossAnimationFunction : MonoBehaviour {
                                         , _stepCameraShakeDuration);
     }
 
+    void BossIsWalking()
+    {
+        GameManager.instance.bossIsWalking = true;
+    }
+
+    void BossIsNotWalking()
+    {
+        GameManager.instance.bossIsWalking = false;
+    }
+
+    void CameraStartJumpLanding()
+    {
+        CameraShake.instance.StartShake(_jumpCameraShakeIntensity/3
+                                        , _jumpCameraShakeDuration/3);
+    }
+
     void CameraShakeJumpLanding()
     {
-
+        CameraShake.instance.StartShake(_jumpCameraShakeIntensity
+                                        , _jumpCameraShakeDuration);
     }
 
     void CameraShakePunch()
