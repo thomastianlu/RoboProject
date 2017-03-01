@@ -16,6 +16,8 @@ public class BossAttackPattern : MonoBehaviour {
     [Header("References")][Space(5)]
     [SerializeField]
     private Animator _animator;
+    [SerializeField]
+    private Animator _warningAnimator;
 
     [SerializeField]
     private float _timeToNextPattern;
@@ -74,11 +76,14 @@ public class BossAttackPattern : MonoBehaviour {
         {
             case Attacks.Jump:
                 _animator.SetFloat("MoveSpeed", 0F);
+                _warningAnimator.Play("WarningJump");
                 break;
             case Attacks.Punch:
                 _animator.SetBool("IsPunching", true);
+                _warningAnimator.Play("WarningPunch");
                 break;
         }
+
         // The faster the platforms move, the more frequent the attacks
         _timeToNextPattern = _timeToNextPatternReset - GameManager.instance.platformMoveSpeed;
     }
