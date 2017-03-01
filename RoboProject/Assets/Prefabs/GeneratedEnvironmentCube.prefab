@@ -126,7 +126,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011568360582}
   - 33: {fileID: 33000012522277360}
-  - 65: {fileID: 65000013942735416}
   - 23: {fileID: 23000012488760994}
   m_Layer: 0
   m_Name: InnerCube
@@ -149,7 +148,7 @@ GameObject:
   - 114: {fileID: 114000013541148834}
   m_Layer: 0
   m_Name: GeneratedEnvironmentCube
-  m_TagString: Untagged
+  m_TagString: Tiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +218,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013603023488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.768, y: -0.549, z: 0}
+  m_LocalPosition: {x: 11.604973, y: 0.43700838, z: 4.2664447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -548,18 +547,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65000013942735416
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013546969814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000014096173672
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -601,6 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parent: {fileID: 1000013603023488}
+  _animator: {fileID: 95000012636226268}
 --- !u!114 &114000011329925972
 MonoBehaviour:
   m_ObjectHideFlags: 1
