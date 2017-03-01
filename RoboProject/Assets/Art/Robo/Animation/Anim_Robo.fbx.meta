@@ -163,7 +163,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: CameraShakeStep
+        data: 
+        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5235294
+        functionName: CameraShakeStep
+        data: 
+        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

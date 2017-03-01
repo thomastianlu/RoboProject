@@ -625,5 +625,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 95000012636226268}
-  _cameraShakeIntensityOnDeath: 0.5
-  _cameraShakeDurationOnDeath: 0.2
+  _cameraShakeIntensityOnDeath: 0.15
+  _cameraShakeDurationOnDeath: 0.15
