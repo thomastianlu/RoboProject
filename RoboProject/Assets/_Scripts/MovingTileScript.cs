@@ -2,17 +2,10 @@
 using System.Collections;
 
 public class MovingTileScript : MonoBehaviour {
-
-    [SerializeField]
-    private float _moveSpeed;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         MoveBlock();
 	}
 
@@ -20,7 +13,9 @@ public class MovingTileScript : MonoBehaviour {
     {
         if (GameManager.instance.bossIsWalking)
         {
-            transform.position += Vector3.left * _moveSpeed * Time.deltaTime;
+            transform.position += Vector3.left 
+                                  * GameManager.instance.platformMoveSpeed 
+                                  * Time.deltaTime;
         }
     }
 }

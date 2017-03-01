@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
     public bool bossIsWalking = true;
+    public float platformMoveSpeed = 1f;
     
     void Awake()
     {

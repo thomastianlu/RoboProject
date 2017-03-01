@@ -317,15 +317,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0
-        functionName: BossIsNotWalking
-        data: 
-        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1
@@ -458,6 +450,14 @@ ModelImporter:
       events:
       - time: 0
         functionName: BossIsNotWalking
+        data: 
+        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9911765
+        functionName: ResetToWalking
         data: 
         objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
           type: 3}
@@ -612,6 +612,14 @@ ModelImporter:
         messageOptions: 0
       - time: 0.77647054
         functionName: CameraShakeJumpLanding
+        data: 
+        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: ResetToWalking
         data: 
         objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
           type: 3}
