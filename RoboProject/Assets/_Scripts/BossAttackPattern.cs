@@ -75,7 +75,7 @@ public class BossAttackPattern : MonoBehaviour {
         switch ((Attacks)randomAttackIterator)
         {
             case Attacks.Jump:
-                _animator.SetBool("IsPunching", true);
+                _animator.SetFloat("MoveSpeed", 0F);
                 _warningAnimator.Play("WarningJump");
                 break;
             case Attacks.Punch:
