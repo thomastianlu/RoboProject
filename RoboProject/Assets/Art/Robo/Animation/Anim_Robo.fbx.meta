@@ -456,6 +456,30 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.57058823
+        functionName: CameraShakePunch
+        data: 
+        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.58823526
+        functionName: ActivatePunchDamage
+        data: 
+        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9647059
+        functionName: DeactivatePunchDamage
+        data: 
+        objectReferenceParameter: {fileID: 100028, guid: 5c53ec4b53368423c8d252543d3a2905,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.9911765
         functionName: ResetToWalking
         data: 

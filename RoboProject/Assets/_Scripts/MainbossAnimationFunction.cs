@@ -22,6 +22,9 @@ public class MainbossAnimationFunction : MonoBehaviour {
     [SerializeField]
     private float _punchCameraShakeDuration;
 
+    [SerializeField]
+    private GameObject _punchAttackCollider;
+
     void CameraShakeStep()
     {
         CameraShake.instance.StartShake(_stepCameraShakeIntensity
@@ -52,6 +55,17 @@ public class MainbossAnimationFunction : MonoBehaviour {
 
     void CameraShakePunch()
     {
+        CameraShake.instance.StartShake(_punchCameraShakeIntensity
+                                        , _punchCameraShakeDuration);
+    }
 
+    void ActivatePunchDamage()
+    {
+        _punchAttackCollider.SetActive(true);
+    }
+
+    void DeactivatePunchDamage()
+    {
+        _punchAttackCollider.SetActive(false);
     }
 }
