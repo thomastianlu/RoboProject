@@ -64,4 +64,13 @@ public class PlayerController : MonoBehaviour {
             _rigidBody.AddForce(Vector2.up * _jumpStrength * _currentGravity);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Boss") || other.CompareTag("BossProjectile"))
+        {
+            GameManager.instance.playerHasDied = true;
+            gameObject.SetActive(false);
+        }
+    }
 }
