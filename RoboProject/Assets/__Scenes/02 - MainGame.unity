@@ -760,6 +760,118 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 707d28cf24d1f2e44a3829d365b8ff30, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &761238708
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -77.32186
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.3984253
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -20.359589
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012107860642, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: largeImpact.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a77defcde1caaa40b6f7502547e0c4e, type: 3}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: smallImpact.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a77defcde1caaa40b6f7502547e0c4e, type: 3}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: explosion.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a77defcde1caaa40b6f7502547e0c4e, type: 3}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: explosion.pitchLow
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: explosion.pitchHigh
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: explosion.volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: smallImpact.volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: smallImpact.priority
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: largeImpact.volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: largeImpact.priority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: largeImpact.pitchLow
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: largeImpact.pitchHigh
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: smallImpact.pitchLow
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
+        type: 2}
+      propertyPath: smallImpact.pitchHigh
+      value: 1.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &820499113
 GameObject:
   m_ObjectHideFlags: 0

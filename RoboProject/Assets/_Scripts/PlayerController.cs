@@ -70,6 +70,10 @@ public class PlayerController : MonoBehaviour {
         if (other.CompareTag("Boss") || other.CompareTag("BossProjectile"))
         {
             GameManager.instance.playerHasDied = true;
+
+            AudioManager audioManager = AudioManager.instance;
+
+            audioManager.PlayAudioParameter(audioManager.explosion);
             gameObject.SetActive(false);
         }
     }
