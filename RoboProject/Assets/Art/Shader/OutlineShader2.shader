@@ -10,50 +10,38 @@
 	}
 
 	SubShader{
+		Tags{ "RenderType" = "Opaque" }
+		LOD 200
 		// Regular Diffuse Pass
-		Pass{
+		CGPROGRAM
 
-			CGPROGRAM
+		// Physically based Standard lighting model, and enable shadows on all light types
+		#pragma surface surf Standard fullforwardshadows
 
-			#pragma vertex vertexFunction
-			#pragma fragment fragmentFunction
-			#include "UnityCG.cginc"
+		// Use shader model 3.0 target, to get nicer looking lighting
+		#pragma target 3.0
 
-			uniform float4 _Color;
-			uniform float4 _MainText_ST;
-			sampler2D _MainTexture;
+		sampler2D _MainTexture;
 
-			struct appdata {
-				float4 vertex : POSITION;
-				float2 uv : TEXCOORD0;
-			};
+		struct Input {
+			float2 uv_MainTex;
+		};
 
-			struct v2f {
-				float4 position : SV_POSITION;
-				float2 uv : TEXCOORD0;
-			};
+		half _Glossiness;
+		half _Metallic;
+		fixed4 _Color;
 
-			// Build out vertex
-			v2f vertexFunction(appdata IN){
-
-				v2f OUT;
-
-				OUT.position = mul(UNITY_MATRIX_MVP, IN.vertex);
-				OUT.uv = IN.uv;
-
-				return OUT;
-			}
-
-			// Color
-			fixed4 fragmentFunction(v2f IN) : SV_Target{
-				
-				float4 textureColor = tex2D(_MainTexture, IN.uv);
-
-				return textureColor * _Color;
-			}
-
-			ENDCG
+		void surf(Input IN, inout SurfaceOutputStandard o) {
+			// Albedo comes from a texture tinted by color
+			fixed4 c = tex2D(_MainTexture, IN.uv_MainTex) * _Color;
+			o.Albedo = c.rgb;
+			// Metallic and smoothness come from slider variables
+			o.Metallic = _Metallic;
+			o.Smoothness = _Glossiness;
+			o.Alpha = c.a;
 		}
+
+		ENDCG
 
 		// Outline Pass
 		Tags { "RenderType" = "Opaque"}
