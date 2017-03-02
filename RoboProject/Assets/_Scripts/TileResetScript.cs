@@ -18,7 +18,8 @@ public class TileResetScript : MonoBehaviour {
             //SendToObjectPool
             CameraShake.instance.StartShake(_cameraShakeIntensityOnDeath
                                             , _cameraShakeDurationOnDeath);
-
+            AudioManager audioManager = AudioManager.instance;
+            audioManager.PlayAudioParameter(audioManager.smallImpact);
             _animator.Play("DeathAnimation");
         }
     }

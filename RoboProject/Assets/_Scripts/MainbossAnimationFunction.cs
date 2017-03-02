@@ -29,6 +29,10 @@ public class MainbossAnimationFunction : MonoBehaviour {
     {
         CameraShake.instance.StartShake(_stepCameraShakeIntensity
                                         , _stepCameraShakeDuration);
+
+        AudioManager audioManager = AudioManager.instance;
+        audioManager.PlayAudioParameter(audioManager.smallImpact);
+        
     }
 
     void BossIsWalking()
@@ -57,6 +61,9 @@ public class MainbossAnimationFunction : MonoBehaviour {
     {
         CameraShake.instance.StartShake(_punchCameraShakeIntensity
                                         , _punchCameraShakeDuration);
+
+        AudioManager audioManager = AudioManager.instance;
+        audioManager.PlayAudioParameter(audioManager.laserShot);
     }
 
     void ActivatePunchDamage()

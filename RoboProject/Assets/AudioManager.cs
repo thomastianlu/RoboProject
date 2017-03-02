@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour {
     public AudioParameter largeImpact;
     public AudioParameter smallImpact;
     public AudioParameter explosion;
+    public AudioParameter laserShot;
 
     void Awake()
     {

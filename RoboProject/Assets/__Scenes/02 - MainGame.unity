@@ -803,72 +803,7 @@ Prefab:
         type: 2}
       propertyPath: largeImpact.audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3a77defcde1caaa40b6f7502547e0c4e, type: 3}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: smallImpact.audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3a77defcde1caaa40b6f7502547e0c4e, type: 3}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: explosion.audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3a77defcde1caaa40b6f7502547e0c4e, type: 3}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: explosion.pitchLow
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: explosion.pitchHigh
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: explosion.volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: smallImpact.volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: smallImpact.priority
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: largeImpact.volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: largeImpact.priority
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: largeImpact.pitchLow
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: largeImpact.pitchHigh
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: smallImpact.pitchLow
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012384749506, guid: 86592f60bd9f3ac4a8743abe5a7b3d79,
-        type: 2}
-      propertyPath: smallImpact.pitchHigh
-      value: 1.1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 49c685aca5063de46a16a4c91c615ec9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86592f60bd9f3ac4a8743abe5a7b3d79, type: 2}
   m_IsPrefabParent: 0
@@ -1881,6 +1816,14 @@ Prefab:
     - target: {fileID: 1000012504471626, guid: b99198c4e8958134589958084156651a, type: 2}
       propertyPath: m_TagString
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012102960660, guid: b99198c4e8958134589958084156651a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012102960660, guid: b99198c4e8958134589958084156651a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5047147
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b99198c4e8958134589958084156651a, type: 2}

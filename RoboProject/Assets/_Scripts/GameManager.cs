@@ -45,6 +45,6 @@ public class GameManager : MonoBehaviour {
 
     void ManageBossMovementSpeed()
     {
-        platformMoveSpeed += Time.deltaTime * 0.02f;
+        platformMoveSpeed += Time.deltaTime * 0.04f;
     }
 }
