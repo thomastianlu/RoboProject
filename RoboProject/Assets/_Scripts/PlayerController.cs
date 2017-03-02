@@ -42,13 +42,14 @@ public class PlayerController : MonoBehaviour {
                                           , 0f
                                           , 0f);
 
-        if (XAxismovement < 0)
+        // Need to add movement speed in order to find out the delta speed in respect to the ground
+        if (XAxismovement + platformMovementSpeed < 0)
         {
             _characterArt.localScale = new Vector3(_characterArtScale.x
                                                    , _characterArtScale.y
                                                    , _characterArtScale.z * -1);
         }
-        else if (XAxismovement > 0)
+        else if (XAxismovement + platformMovementSpeed > 0)
         {
             _characterArt.localScale = new Vector3(_characterArtScale.x
                                                    , _characterArtScale.y
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour {
 
     void ManageVerticalMovement()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             _rigidBody.AddForce(Vector2.up * _jumpStrength * _currentGravity);
         }

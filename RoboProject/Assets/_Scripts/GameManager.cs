@@ -21,9 +21,15 @@ public class GameManager : MonoBehaviour {
 
     void Update()
     {
+        ManageBossMovementSpeed();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
+    }
+
+    void ManageBossMovementSpeed()
+    {
+        platformMoveSpeed += Time.deltaTime * 0.02f;
     }
 }
