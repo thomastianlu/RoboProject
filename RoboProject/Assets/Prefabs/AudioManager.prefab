@@ -1077,7 +1077,7 @@ MonoBehaviour:
   - {fileID: 114000011230911646}
   - {fileID: 114000012872155826}
   largeImpact:
-    audioClip: {fileID: 8300000, guid: 3a77defcde1caaa40b6f7502547e0c4e, type: 3}
+    audioClip: {fileID: 8300000, guid: 49c685aca5063de46a16a4c91c615ec9, type: 3}
     volume: 0.5
     priority: 1
     pitchLow: 0.9
