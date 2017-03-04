@@ -31,11 +31,17 @@ public class GameManager : MonoBehaviour {
     void Update()
     {
         ManageBossMovementSpeed();
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        ManagePlayerDeath();
+        ManageQuitInput();
+    }
 
+    void ManageBossMovementSpeed()
+    {
+        platformMoveSpeed += Time.deltaTime * 0.04f;
+    }
+
+    void ManagePlayerDeath()
+    {
         if (playerHasDied)
         {
             _timeUntilGameOverPage -= Time.deltaTime;
@@ -48,8 +54,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    void ManageBossMovementSpeed()
+    void ManageQuitInput()
     {
-        platformMoveSpeed += Time.deltaTime * 0.04f;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

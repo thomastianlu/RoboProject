@@ -12,11 +12,6 @@ public class SFXLayer : MonoBehaviour {
 
     private int _currentClipPriority;
 
-    public void SetPriority(int priority)
-    {
-        _currentClipPriority = priority;
-    }
-
     public bool NewSoundClipIsHigherPriority(int priority)
     {
         return _currentClipPriority >= priority;
@@ -34,10 +29,5 @@ public class SFXLayer : MonoBehaviour {
         _audioSource.volume = volume;
         _audioSource.Play();
         _currentClipPriority = priority;
-    }
-
-    public void StopPlayingSound()
-    {
-        _audioSource.Stop();
     }
 }

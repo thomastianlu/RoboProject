@@ -45,9 +45,9 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
+    // Plays an audio clip with the given parameters
     public void PlayAudioParameter(AudioParameter audio)
     {
-        // Possible pseudorandom code needed to shuffle the random picks a bit more
         PlayAudio(audio.audioClip
                  , audio.volume
                  , audio.priority

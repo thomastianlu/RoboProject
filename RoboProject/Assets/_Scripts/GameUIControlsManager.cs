@@ -18,6 +18,7 @@ public class GameUIControlsManager : MonoBehaviour {
 
     void ManageInputs()
     {
+        // Timer is necessary so that players don't skip the screen when button mashing
         _screenStayMinimum -= Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space) 

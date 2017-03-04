@@ -63,6 +63,7 @@ public class TileGenerator : MonoBehaviour {
 
     void ManageTileGeneration()
     {
+        // If either of the top or bottom tile generators should create a tile, create the tile from the object pool
         if (_topTileGenerator.shouldCreateTile)
         {
             GameObject newTile = GetPooledObject();

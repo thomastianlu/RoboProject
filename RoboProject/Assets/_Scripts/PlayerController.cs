@@ -34,21 +34,20 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ManageHorizontalMovement();
-        ManageVerticalMovement();
+        ManageJumping();
 	}
 
     void ManageHorizontalMovement()
     {
+        // Get the platform movement speed - if the boss is walking, set the speed, if not, set to 0
         float platformMovementSpeed = GameManager.instance.bossIsWalking ? 
                                       GameManager.instance.platformMoveSpeed * Time.deltaTime : 0;
 
         float XAxismovement = (Input.GetAxis("Horizontal") * Time.deltaTime * _movementSpeed) - platformMovementSpeed;
 
-        transform.position += new Vector3(XAxismovement
-                                          , 0f
-                                          , 0f);
+        transform.position += Vector3.right * XAxismovement;
 
-        // Need to add movement speed in order to find out the delta speed in respect to the ground
+        // Calculates which direction the player is facing and faces the player art accordingly
         if (XAxismovement + platformMovementSpeed < 0)
         {
             _characterArt.localScale = new Vector3(_characterArtScale.x
@@ -63,8 +62,9 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void ManageVerticalMovement()
+    void ManageJumping()
     {
+        // Triggers the jump
         if (Input.GetKeyDown(KeyCode.W) & _playerGroundDetector.isGrounded)
         {
             _rigidBody.AddForce(Vector2.up * _jumpStrength * _currentGravity);
@@ -73,13 +73,14 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // Trigger Player Death
         if (other.CompareTag("Boss") || other.CompareTag("BossProjectile"))
         {
             GameManager.instance.playerHasDied = true;
 
             AudioManager audioManager = AudioManager.instance;
-
             audioManager.PlayAudioParameter(audioManager.explosion);
+
             gameObject.SetActive(false);
         }
     }

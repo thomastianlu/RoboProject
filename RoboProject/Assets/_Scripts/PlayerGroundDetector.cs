@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Ground Detector
+// This script checks if the player is grounded
+// This is needed for the jump functionality so that the player doesn't jump infinitely
+
 public class PlayerGroundDetector : MonoBehaviour {
 
     private bool _isGrounded;
