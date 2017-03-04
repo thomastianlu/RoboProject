@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private Transform _characterArt;
     private Vector3 _characterArtScale;
+    [SerializeField]
+    private PlayerGroundDetector _playerGroundDetector;
 
     private float _currentGravity;
 
@@ -63,7 +65,7 @@ public class PlayerController : MonoBehaviour {
 
     void ManageVerticalMovement()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) & _playerGroundDetector.isGrounded)
         {
             _rigidBody.AddForce(Vector2.up * _jumpStrength * _currentGravity);
         }
