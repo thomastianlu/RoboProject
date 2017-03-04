@@ -2,6 +2,10 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+// Game UI Controls Manager Script
+// Manages the game at the end and title screen to see which part of the game
+// the game should navigate to
+
 public class GameUIControlsManager : MonoBehaviour {
     [SerializeField]
     private bool _shouldRestartGame;

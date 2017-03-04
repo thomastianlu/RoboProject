@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Main Boss Animation Function Script
+// This script allows functions to be called in the animations
+// This is mainly for camera shake and audio functions
+
 public class MainbossAnimationFunction : MonoBehaviour {
     
     [Header("References")][Space(5)]

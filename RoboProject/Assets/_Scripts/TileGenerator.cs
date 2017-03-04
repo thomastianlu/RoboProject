@@ -2,6 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
+// Tile Generator Script
+// This script manages the procedural tile generation
+// The tile generation is decided randomly under the constraint
+// that the next tile must be in an adjacent row, and that it can 
+// only be one unit above. The tiles cannot be made above or below
+// a certain constraint
 
 public class TileGenerator : MonoBehaviour {
 

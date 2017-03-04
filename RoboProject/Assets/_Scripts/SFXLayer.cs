@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// SFX Layer Script
+// SFXLayers interact with the Audio Manager so that there aren't any more than
+// a certain amount of SFX playing at the same time in a given space
+
 public class SFXLayer : MonoBehaviour {
 
     [SerializeField]

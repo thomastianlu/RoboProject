@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Player Controller Script
+// This is the player controller - it carries the code that translate the input into movement
+// It also manages the death of the player when he/she hits the boss
+
 public class PlayerController : MonoBehaviour {
     
     [Header("Player Stats")][Space(5)]

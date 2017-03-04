@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Tile Reset Script
+// This script "Destroys" the tile once it gets hit by the boss
+
 public class TileResetScript : MonoBehaviour {
 
     [SerializeField]

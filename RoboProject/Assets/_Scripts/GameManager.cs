@@ -2,6 +2,11 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+// Game Manager Script - SINGLETON
+// This script manages the speed of the tiles moving in the game
+// and to check if the player has died.
+// It also gradually increases the speed of the boss walking over time
+
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;

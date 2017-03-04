@@ -142,10 +142,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011716616234}
-  - 114: {fileID: 114000011329925972}
   - 61: {fileID: 61000013243244250}
   - 50: {fileID: 50000010527202614}
   - 114: {fileID: 114000013541148834}
+  - 114: {fileID: 114000011725450708}
   m_Layer: 0
   m_Name: GeneratedEnvironmentCube
   m_TagString: Tiles
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parent: {fileID: 1000013603023488}
   _animator: {fileID: 95000012636226268}
---- !u!114 &114000011329925972
+--- !u!114 &114000011725450708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013603023488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6c940cc89c992429a1a997075aaa23, type: 3}
+  m_Script: {fileID: 11500000, guid: df6db65f78d4fd3468be488d0c43d7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114000013541148834

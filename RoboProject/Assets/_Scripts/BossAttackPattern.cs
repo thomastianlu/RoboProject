@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Boss Attack Pattern Script
+// This script manages the pattern of the boss attacks
+// It also manages the warning animations that are played before the attack
+// Animations and some functionality are called through the animations
+
 public class BossAttackPattern : MonoBehaviour {
 
     private enum Attacks

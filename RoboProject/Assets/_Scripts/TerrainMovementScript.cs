@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Terrain Movement Script
+// This script enables terrain to move towards the left
+
 public class TerrainMovementScript : MonoBehaviour {
     
 	// Update is called once per frame
@@ -9,8 +12,6 @@ public class TerrainMovementScript : MonoBehaviour {
         float platformMovementSpeed = GameManager.instance.bossIsWalking ?
                                       GameManager.instance.platformMoveSpeed * Time.deltaTime : 0;
 
-        transform.position -= new Vector3(platformMovementSpeed
-                                          , 0f
-                                          , 0f);
+        transform.position -= Vector3.right * platformMovementSpeed;
 	}
 }

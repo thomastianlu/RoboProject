@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Camera Shake Script - SINGLETON
+// This script manages the camera shake mechanism
+// It can be called by giving the function an intensity and length
+
 public class CameraShake : MonoBehaviour {
     public static CameraShake instance = null;
 

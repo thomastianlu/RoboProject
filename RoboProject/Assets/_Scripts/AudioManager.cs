@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Audio Manager Script - SINGLETON
+// It manages the audio - what audio needs to be played, its pitch variations
+// and which audio to play
+
 public class AudioManager : MonoBehaviour {
 
     public static AudioManager instance = null;
     
-
     [System.Serializable]
     public struct AudioParameter
     {

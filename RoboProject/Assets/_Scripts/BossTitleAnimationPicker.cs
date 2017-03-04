@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Boss Title Animation Script
+// This script manages the animation for the boss on the title screen
+// It does not play the walk animation on the title screen
+
 public class BossTitleAnimationPicker : MonoBehaviour {
 
     [SerializeField]
