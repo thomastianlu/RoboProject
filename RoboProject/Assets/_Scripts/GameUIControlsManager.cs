@@ -32,7 +32,6 @@ public class GameUIControlsManager : MonoBehaviour {
             && _screenStayMinimum < 0
             && _shouldRestartGame)
         {
-            int buildIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(0);
         }
     }
